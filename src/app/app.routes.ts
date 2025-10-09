@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { Login } from './features/auth/pages/login/login';
+import { header } from './shared/componentes/header/header';
 
 
 
 export const routes: Routes =[
-{path: 'login', component: Login},
-{path: '**', redirectTo: 'login', pathMatch: 'full'}
+{path: 'header', component: header},
+{path: '**', redirectTo: 'header', pathMatch: 'full'}
 
 ];
