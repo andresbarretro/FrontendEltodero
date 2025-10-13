@@ -5,7 +5,7 @@ import { header } from './shared/componentes/header/header';
 
 
 export const routes: Routes =[
-{path: 'header', component: header},
+
 {path: '**', redirectTo: 'header', pathMatch: 'full'}
 
 ];

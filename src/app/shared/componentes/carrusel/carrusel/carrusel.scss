@@ -1,0 +1,12 @@
+#carousel {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-inner img {
+  height: 400px;
+  object-fit: cover;
+}
