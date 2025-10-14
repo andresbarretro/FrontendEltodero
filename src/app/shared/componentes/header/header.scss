@@ -1,27 +1,28 @@
 nav{
   background-color: #333;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
 }
 
-nav div {
+nav  {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 200px;
   height: 60px;
 }
 
 nav ul {
+  display: flex;
+  flex-direction: row;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
+    gap: 20px;
 }
 
-nav li {
-  margin: 0 15px;
-}
+
 
 nav a {
   color: white;
@@ -29,4 +30,25 @@ nav a {
 }
 nav a:hover {
   text-decoration: underline;
+}
+input{
+  width: 40rem;
+  height: 2rem;
+  border-radius: 15px;
+}
+
+.iconos{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+
+}
+
+.Boton-buscar{
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
 }
