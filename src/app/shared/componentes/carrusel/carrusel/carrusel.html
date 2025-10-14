@@ -1,6 +1,65 @@
-<div class="carrusel-container">
-    <div class="carrusel">
-        
-        <img src="" alt="">
-    </div>
+<!--
+  Carrusel de imágenes con Bootstrap 5 y Angular 20 (sintaxis moderna con @for)
+  ---------------------------------------------------------
+  Este componente recorre dinámicamente un arreglo de imágenes
+  y genera cada diapositiva ("slide") del carrusel automáticamente.
+-->
+<!-- ID del carrusel (lo usa Bootstrap para enlazar los botones de control) -->
+<!-- Clases de Bootstrap: "carousel slide" activa la animación de deslizamiento -->
+<!-- Atributo de Bootstrap que indica que el carrusel debe iniciar automáticamente -->
+
+<div
+  id="carouselExample"
+  class="carousel slide mx-auto"
+  data-bs-ride="carousel"
+>
+
+
+  <!-- Contenedor principal de los elementos (las imágenes que rotan) -->
+  <div class="carousel-inner">
+
+    <!--
+      Directiva moderna de Angular (@for) que recorre el arreglo de imágenes.
+      "imagen" es el elemento actual.
+      "$index" es la posición de cada imagen en el arreglo.
+      "track $index" le dice a Angular que use el índice como identificador.
+    -->
+    @for (imagen of imagenes; track $index) {
+
+      <!--
+        Cada iteración genera un <div> con la clase "carousel-item".
+        Bootstrap necesita que el primer elemento tenga la clase "active"
+        para mostrarlo inicialmente, por eso se usa [class.active]="$index === 0".
+      -->
+      <div class="carousel-item" [class.active]="$index === 0">
+
+        <!--
+          Imagen del slide.
+          [src]="imagen" hace binding con el arreglo del componente.
+          "d-block w-100" son clases de Bootstrap para que la imagen sea bloque y ocupe el 100% del ancho.
+          El "alt" muestra texto alternativo accesible (describe la imagen).
+        -->
+        <img [src]="imagen" class="d-block w-100" alt="Imagen {{ $index + 1 }}">
+      </div>
+    }
+  </div>
+
+  <!--
+    Botón de control: retroceder al slide anterior.
+    data-bs-target indica qué carrusel controlar (por ID).
+    data-bs-slide="prev" indica la dirección del movimiento.
+  -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- Ícono de flecha izquierda -->
+    <span class="visually-hidden">Anterior</span> <!-- Texto accesible para lectores de pantalla -->
+  </button>
+
+  <!--
+    Botón de control: avanzar al siguiente slide.
+    data-bs-slide="next" indica que el movimiento es hacia adelante.
+  -->
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span> <!-- Ícono de flecha derecha -->
+    <span class="visually-hidden">Siguiente</span> <!-- Texto accesible -->
+  </button>
 </div>

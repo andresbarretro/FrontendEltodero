@@ -1,12 +1,53 @@
-#carousel {
-  width: 100%;
-  max-width: 900px;
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden;
+/*
+  Estilos del carrusel principal
+  ------------------------------
+  Este bloque define la apariencia general del contenedor del carrusel
+  y cómo deben comportarse las imágenes dentro de él.
+*/
+
+.carousel {
+  width: 100%;           /* El carrusel ocupa todo el ancho disponible del contenedor */
+  margin: 2rem auto;     /* Separa el carrusel del resto del contenido y lo centra horizontalmente */
+  border-radius: 12px;   /* Redondea las esquinas del carrusel para un diseño más suave */
+  overflow: hidden;      /* Oculta cualquier parte de la imagen que se salga del borde redondeado */
+  background-color: #000; /* Fondo negro para dar contraste y resaltar las imágenes */
+
+  /*
+    Estilos para las imágenes dentro del carrusel
+    ---------------------------------------------
+    Este bloque controla el tamaño y la forma en que las imágenes se ajustan al espacio.
+  */
+  img {
+    width: 100%;          /* La imagen ocupa todo el ancho del carrusel */
+    height: 450px;        /* Altura fija para pantallas grandes (desktop) */
+    object-fit: cover;    /* Recorta la imagen sin deformarla, centrando su contenido */
+  }
 }
 
-.carousel-inner img {
-  height: 400px;
-  object-fit: cover;
+/*
+  Diseño Responsivo
+  -----------------
+  Estas reglas se activan automáticamente cuando el ancho de la pantalla
+  es menor que cierto tamaño (en píxeles).
+  Sirven para adaptar el carrusel a tablets y móviles.
+*/
+
+/*
+  Cuando la pantalla es menor a 992px (tamaño típico de tablet horizontal),
+  se reduce la altura de las imágenes para mantener la proporción visual.
+*/
+@media (max-width: 992px) {
+  .carousel img {
+    height: 350px;  /* Reduce la altura para pantallas medianas */
+  }
+}
+
+/*
+  Cuando la pantalla es menor a 768px (tamaño típico de móvil),
+  se ajusta aún más la altura de las imágenes.
+*/
+@media (max-width: 768px) {
+  .carousel img {
+    height: 250px;  /* Altura más baja para pantallas pequeñas */
+  }
 }
