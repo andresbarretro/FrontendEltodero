@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
-import { Login } from './features/auth/pages/login/login';
-import { header } from './shared/componentes/header/header';
-
-
+import { Home } from './features/auth/pages/comoponentes/home/home';
+import { Nosotros } from './features/auth/pages/comoponentes/nosotros/nosotros';
 
 export const routes: Routes =[
-
-{path: '**', redirectTo: 'header', pathMatch: 'full'}
-
+  { path: 'home', component: Home },
+  { path: 'nosotros', component: Nosotros},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];

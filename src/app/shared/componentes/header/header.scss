@@ -1,59 +1,117 @@
-nav{
-  background-color: #333;
-  overflow: hidden;
-  display: flex;
-  border-radius: 15px;
-  // flex-direction: row;
-   justify-content: center;
-  // align-items: center;
-}
-
-nav  {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-  height: 60px;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-    gap: 20px;
-}
-
-
-
-nav a {
+.barra-superior {
+  background-color: #052e5c;
   color: white;
-  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding: 5px 40px;
+  font-weight: bold;
+  font-size: 13px;
 }
-nav a:hover {
+
+.barra-superior span {
+  cursor: pointer;
+}
+
+.barra-superior span:hover {
   text-decoration: underline;
 }
-input{
-  width: 40rem;
-  height: 2rem;
-  border-radius: 15px;
+
+.Contenedor1 {
+  background-color: #083d77;
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
 }
 
-.iconos{
-  display:flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  
-  
+.logot {
+  width: 180px;
+  height: auto;
 }
 
-.Boton-buscar{
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+}
 
-  background: none;
+.barra-busqueda input {
+  padding: 10px;
+  width: 450px;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  font-size: 16px;
+}
+
+.barra-busqueda button {
+  padding: 10px 20px;
   border: none;
+  background-color: #0a4b99;
+  color: white;
+  font-size: 16px;
+  border-radius: 0 6px 6px 0;
   cursor: pointer;
-  font-size: 18px;
 }
+
+.barra-busqueda button:hover {
+  background-color: #115fc4;
+}
+
+
+.iconos-derecha {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconos-derecha .icono {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.Contenedor2{
+  background-color:#a9a999;
+  width:100%;
+  height:5px;
+}
+
+.Contenedor3{
+  background-color: white;
+  width: 100%;
+  height: 32px;
+}
+
+.MenuP{
+  display: flex;
+  list-style:none;
+  gap: 6px;
+}
+
+.MenuP a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #083d77;
+  font-size:16px;
+}
+
+.MenuP p{
+  font-weight:bold;
+  color: #a9a999;
+}
+
+.BotonI{
+  text-align: center;
+  background-color: #a9a999;
+  height: 32px;
+  width: 90px;
+}
+
+.Inicio{
+  color: white;
+}
+
