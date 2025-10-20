@@ -1,18 +1,13 @@
+import { Login } from './../../../features/auth/pages/login/login';
 import { Component } from '@angular/core';
-import { RouterLink  } from "@angular/router";
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink  ],
+  imports: [],
   standalone: true,
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
-export class Header {
-  menuAbierto = false;
-
-  toggleMenu() {
-    this.menuAbierto = !this.menuAbierto;
-  }
+export class header {
 
 }
