@@ -115,3 +115,80 @@
   color: white;
 }
 
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #083d77;
+}
+
+/* Estilos del menú */
+.MenuP {
+  display: flex;
+  list-style: none;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostrar el ícono hamburguesa */
+  }
+
+  .MenuP {
+    display: none; /* Ocultar el menú por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 120px; /* justo debajo del header principal */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 2px solid #a9a999;
+    padding: 15px 0;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .MenuP.menu-abierto {
+    display: flex; /* Mostrar el menú cuando se abra */
+  }
+
+  .MenuP p {
+    display: none; /* Quitar las barras '|' en mobile */
+  }
+
+  .BotonI {
+    margin-top: 10px;
+  }
+}
+
+
+.header-principal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    /* Ajustes generales solo para mobile */
+    .barra-superior {
+      font-size: 11px;
+      padding: 5px 10px;
+      justify-content: center;
+    }
+
+    .Contenedor1 {
+      flex-direction: column;
+      height: auto;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .barra-busqueda input {
+      width: 100%;
+    }
+  }
+}

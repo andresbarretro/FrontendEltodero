@@ -1,4 +1,6 @@
-<div class="barra-superior">
+<header class="header-principal">
+
+  <div class="barra-superior">
   <span>MÉTODOS DE PAGO</span>
   <span>SIGUE TU PEDIDO</span>
   <span routerLink="/nosotros">NOSOTROS</span>
@@ -23,35 +25,40 @@
 <nav class="Contenedor2"></nav>
 
 <nav class="Contenedor3">
-  <nav>
-<ul class="MenuP">
-<li><a href="#">Moviles</a></li>
-<p>|</p>
-<li><a href="#">Computadores</a></li>
-<p>|</p>
-<li><a href="#">Hogar</a></li>
-<p>|</p>
-<li><a href="#">Pantallas</a></li>
-<p>|</p>
-<li><a href="#">Accesorios</a></li>
-<p>|</p>
-<li><a href="#">Juegos</a></li>
-<p>|</p>
-<li><a href="#">Audio</a></li>
-<p>|</p>
-<li><a href="#">Fotografia</a></li>
-<p>|</p>
-<li><a href="#">Coleccion</a></li>
-<p>|</p>
-<li><a href="#">Decoracion</a></li>
-<p>|</p>
-<li><a href="#">Deportes</a></li>
-<p>|</p>
-<li><a href="#">Motocicletas</a></li>
-<p>|</p>
-<li><a href="#">Juguetes</a></li>
-<li class="BotonI"><a href="#" style="color: white;">Inicio</a></li>
-  </ul>
-  </nav>
-</nav>
+  <div class="menu-wrapper">
+    <button class="menu-toggle" (click)="toggleMenu()">
+      ☰
+    </button>
+    <nav>
+      <ul class="MenuP">
+        <li><a href="#">Moviles</a></li>
+        <p>|</p>
+        <li><a href="#">Computadores</a></li>
+        <p>|</p>
+        <li><a href="#">Hogar</a></li>
+        <p>|</p>
+        <li><a href="#">Pantallas</a></li>
+        <p>|</p>
+        <li><a href="#">Accesorios</a></li>
+        <p>|</p>
+        <li><a href="#">Juegos</a></li>
+        <p>|</p>
+        <li><a href="#">Audio</a></li>
+        <p>|</p>
+        <li><a href="#">Fotografia</a></li>
+        <p>|</p>
+        <li><a href="#">Coleccion</a></li>
+        <p>|</p>
+        <li><a href="#">Decoracion</a></li>
+        <p>|</p>
+        <li><a href="#">Deportes</a></li>
+        <p>|</p>
+        <li><a href="#">Motocicletas</a></li>
+        <p>|</p>
+        <li><a href="#">Juguetes</a></li>
+        <li class="BotonI"><a href="#" style="color: white;">Inicio</a></li>
+      </ul>
+    </nav>
+
+</div>
 

@@ -1,42 +1,18 @@
+<div class="products-container">
 
 
-   
-
-    <div class="cards-home">
-        <div>
-            <h1>
-                hola
-            </h1>
-        </div>
-
-        <div>
-            <h1>
-                hola
-            </h1>
-        </div>
-
-        <div>
-            <h1>
-                hola
-            </h1>
-        </div>
-
-        <div>
-            <h1>
-                hola
-            </h1>
-        </div>
-        <div>
-            <h1>
-                hola
-            </h1>
-        </div>
-        <div>
-            <h1>
-                hola
-            </h1>
-        </div>
-
-    </div>
-
-
+  @if (loading) {
+    <p>Cargando lista de productos...</p>
+  } @else {
+    @for (item of products; track item.id) {
+      <div class="product-card">
+        <img src="assets/prueba_1.png" alt="img">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price | currency:'USD' }}</p>
+        <p>{{item.description}}</p>
+      </div>
+    } @empty {
+      <p>No hay productos para mostrar.</p>
+    }
+  }
+</div>

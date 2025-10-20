@@ -8,7 +8,7 @@ import { Nosotros } from './features/auth/pages/comoponentes/nosotros/nosotros';
 import { Home } from './features/auth/pages/comoponentes/home/home';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header],
+  imports: [RouterOutlet, Header,Carrusel,Main,Home],
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.scss'
