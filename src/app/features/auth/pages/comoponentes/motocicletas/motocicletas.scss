@@ -1,0 +1,57 @@
+.carousel-container1 {
+  width: 100%;
+  padding: 20px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 Centra horizontalmente todo el contenido */
+
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+
+    justify-content: center; /* 🔥 Centra las cards si no hay overflow */
+    width: 90%; /* 🔥 Controla el ancho del carrusel */
+    max-width: 1200px; /* 🔥 Evita que se extienda demasiado */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 auto;
+      width: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      scroll-snap-align: center;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-6px);
+      }
+
+      img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 16px;
+      }
+    }
+  }
+}
