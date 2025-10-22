@@ -1,3 +1,304 @@
- <app-header></app-header>
- <app-carrusel></app-carrusel>
- <app-main></app-main>
+<div class="carrusel">
+  <div class="carrusel-contenedor">
+    <div class="slide">
+      <img src="/IMAGENES/banner1.png" alt="Banner 1" />
+    </div>
+    <div class="slide">
+      <img src="/IMAGENES/banner2.png" alt="Banner 2" />
+    </div>
+    <div class="slide">
+      <img src="/IMAGENES/banner3.png" alt="Banner 3" />
+    </div>
+  </div>
+</div>
+
+<!----------------------------------------------------->
+<img src="/IMAGENES/Ofertas.png" alt="Ofertas"/>
+<!----------------------------------------------------->
+
+<div class="carousel-wrapper">
+  <button class="arrow left" aria-label="Anterior" (click)="scrollLeft()">‹</button>
+
+  <div class="carousel" #carousel>
+    <div class="card">
+      <img src="PRODUCTOS/moviles2.jpg" alt="iPhone 17" />
+      <div class="card-content">
+        <h3>Telefono Fijo</h3>
+        <p>Sonido claro y diseño resistente para el hogar.</p>
+        <div class="card-footer">
+          <span class="price">$60.000</span>
+          <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="PRODUCTOS/hogar2.jpg" alt="iPhone 17 Pro" />
+      <div class="card-content">
+        <h3>Silla Colgante</h3>
+        <p>Comodidad flotante y estilo moderno.</p>
+        <div class="card-footer">
+          <span class="price">$100.000</span>
+          <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="PRODUCTOS/accesorios2.jpg" alt="iPhone 17 Ultra" />
+      <div class="card-content">
+        <h3>Gorra</h3>
+        <p>Estilo urbano y ajuste perfecto para estar a la moda.</p>
+        <div class="card-footer">
+          <span class="price">$10.000</span>
+          <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="PRODUCTOS/juegos2.jpg" alt="iPhone 17 Ultra" />
+      <div class="card-content">
+        <h3>CONSOLA PORTATIL</h3>
+        <p>Diversión total y potencia en tus manos</p>
+        <div class="card-footer">
+          <span class="price">$80.000</span>
+          <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="PRODUCTOS/fotografia2.jpg" alt="iPhone 17 Ultra" />
+      <div class="card-content">
+        <h3>DRON</h3>
+        <p>Vuelo estable y grabación 4K nítida..</p>
+        <div class="card-footer">
+          <span class="price">$40.000</span>
+          <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="PRODUCTOS/decoracion2.jpg" alt="iPhone 17 Ultra" />
+      <div class="card-content">
+        <h3>Delfines</h3>
+        <p>Diseño fino y reflejo deslumbrante..</p>
+        <div class="card-footer">
+          <span class="price">$15.000</span>
+          <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="PRODUCTOS/decoracion3.jpg" alt="iPhone 17 Ultra" />
+      <div class="card-content">
+        <h3>Gamer</h3>
+        <p>Diseño transparente y estilo futurista.</p>
+        <div class="card-footer">
+          <span class="price">$15.000</span>
+          <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="IMAGENES/camara.jpg" alt="iPhone 17 Ultra" />
+      <div class="card-content">
+        <h3>IPHONE 17 ULTRA</h3>
+        <p>La versión más potente con cámara cuádruple.</p>
+        <div class="card-footer">
+          <span class="price">$5.200.000</span>
+          <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ... más cards ... -->
+  </div>
+
+  <button class="arrow right" aria-label="Siguiente" (click)="scrollRight()">›</button>
+</div>
+<!----------------------------------------------------->
+<img src="/IMAGENES/Productos.png" alt="Ofertas"/>
+<!----------------CONTAINER1------------------------------------->
+<div class="cards-container">
+   <div class="card">
+    <img src="PRODUCTOS/moviles.jpg" alt="iPhone 17" />
+    <div class="card-content">
+      <h3>Samsung Galaxy A05</h3>
+      <p>
+       Rendimiento fluido y acabado premium.
+      </p>
+      <div class="card-footer">
+        <span class="price">$280.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="PRODUCTOS/computadores.jpg" alt="iPhone 17" />
+    <div class="card-content">
+      <h3>Pc Gamer</h3>
+      <p>
+        Potencia extrema y estilo futurista.
+      </p>
+      <div class="card-footer">
+        <span class="price">$2.600.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="card">
+    <img src="PRODUCTOS/hogar.jpg" alt="iPhone 17" />
+    <div class="card-content">
+      <h3>Edredon</h3>
+      <p>
+        Descanso pleno y textura premium.
+      </p>
+      <div class="card-footer">
+        <span class="price">$70.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="card">
+    <img src="PRODUCTOS/pantalla.jpg" alt="iPhone 17" />
+    <div class="card-content">
+      <h3>Pantalla De Proyector</h3>
+      <p>
+        Imagen nítida y montaje sencillo perfecto para el hogar.
+      </p>
+      <div class="card-footer">
+        <span class="price">$40.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+ <div class="card">
+    <img src="PRODUCTOS/accesorios.jpg" alt="iPhone 17" />
+    <div class="card-content">
+      <h3>Reloj</h3>
+      <p>
+        Elegancia clásica y tecnología exacta para cualquier ocacion.
+      </p>
+      <div class="card-footer">
+        <span class="price">$20.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="PRODUCTOS/juegos.jpg" alt="iPhone 17" />
+    <div class="card-content">
+      <h3>CONSOLA PORTATIL</h3>
+      <p>
+        Diversión total y potencia en tus manos.
+      </p>
+      <div class="card-footer">
+        <span class="price">$210.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="PRODUCTOS/fotografia.jpg" alt="iPhone 17" />
+    <div class="card-content">
+      <h3>Camara fotografica</h3>
+      <p>
+        Captura nítida y estilo profesional para recordar ese dia especial.
+      </p>
+      <div class="card-footer">
+        <span class="price">$50.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="PRODUCTOS/carros.jpg" alt="iPhone 17 Pro" />
+    <div class="card-content">
+      <h3>Compresor</h3>
+      <p>
+        Potencia constante y diseño resistente.
+      </p>
+      <div class="card-footer">
+        <span class="price">$70.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+
+ <div class="cards-container">
+  <div class="card">
+    <img src="PRODUCTOS/deportes.jpg" alt="iPhone 17" />
+    <div class="card-content">
+      <h3>Fortalecedor</h3>
+      <p>
+        Reparación total y resultado firme..
+      </p>
+      <div class="card-footer">
+        <span class="price">$5.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+<div class="card">
+    <img src="IMAGENES/iphone17.jpg" alt="iPhone 17 Pro" />
+    <div class="card-content">
+      <h3>IPHONE 17 PRO</h3>
+      <p>
+        Potencia profesional con el mejor rendimiento y diseño.
+      </p>
+      <div class="card-footer">
+        <span class="price">$4.200.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="IMAGENES/iphone17.jpg" alt="iPhone 17 Pro" />
+    <div class="card-content">
+      <h3>IPHONE 17 PRO</h3>
+      <p>
+        Potencia profesional con el mejor rendimiento y diseño.
+      </p>
+      <div class="card-footer">
+        <span class="price">$4.200.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+<div class="card">
+    <img src="IMAGENES/iphone17.jpg" alt="iPhone 17 Pro" />
+    <div class="card-content">
+      <h3>IPHONE 17 PRO</h3>
+      <p>
+        Potencia profesional con el mejor rendimiento y diseño.
+      </p>
+      <div class="card-footer">
+        <span class="price">$4.200.000</span>
+        <button class="buy-btn">🛍️</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+

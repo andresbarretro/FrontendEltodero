@@ -44,6 +44,11 @@ constructor(
     }
   }
 
+  cerrarLogin() {
+  this.router.navigate(['/home']);
+}
+
+
   iniciarSesion() {
     console.log('Iniciando sesión...');
     this.cerrarModal.emit();

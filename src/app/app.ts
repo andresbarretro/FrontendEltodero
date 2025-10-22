@@ -21,7 +21,7 @@ import { Motocicletas } from './features/auth/pages/comoponentes/motocicletas/mo
 import { Servicios } from './features/auth/pages/comoponentes/servicios/servicios';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header,Carrusel,Main,Home],
+  imports: [RouterOutlet, Header, Carrusel, Main,Login,Home,Nosotros,Moviles,Computadores,Hogar,Pantallas,Accesorios,Juegos,Audio,Fotografia,Carros,Decoracion,Deportes,Motocicletas,Servicios],
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.scss'
