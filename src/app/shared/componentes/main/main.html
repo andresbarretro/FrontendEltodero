@@ -6,10 +6,11 @@
   } @else {
     @for (item of products; track item.id) {
       <div class="product-card">
-        <img src="assets/prueba_1.png" alt="img">
+        <img [src]="item.imagen" alt="{{ item.name }}" class="product-image" />
         <h3>{{ item.name }}</h3>
         <p>{{ item.price | currency:'USD' }}</p>
         <p>{{item.description}}</p>
+
       </div>
     } @empty {
       <p>No hay productos para mostrar.</p>
