@@ -21,7 +21,7 @@
 
   <div class="carousel" #carousel>
     <div class="card">
-      <img src="PRODUCTOS/moviles2.jpg" alt="iPhone 17" />
+      <img src="PRODUCTOS/moviles2.jpg" alt="iPhone 17" />x|
       <div class="card-content">
         <h3>Telefono Fijo</h3>
         <p>Sonido claro y diseño resistente para el hogar.</p>
@@ -123,8 +123,32 @@
 </div>
 <!----------------------------------------------------->
 <img src="/IMAGENES/Productos.png" alt="Ofertas"/>
+
+<div class="products-container">
+
+
+  @if (loading) {
+    <p>Cargando lista de productos...</p>
+  } @else {
+    @for (item of productos; track item.id) {
+      <div class="product-card">
+        <img src="assets/prueba_1.png" alt="img">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price | currency:'USD' }}</p>
+        <p>{{item.description}}</p>
+      </div>
+    } @empty {
+      <p>No hay productos para mostrar.</p>
+    }
+  }
+
+
+
+
+
 <!----------------CONTAINER1------------------------------------->
-<div class="cards-container">
+
+<!-- <div class="cards-container">
    <div class="card">
     <img src="PRODUCTOS/moviles.jpg" alt="iPhone 17" />
     <div class="card-content">
@@ -301,4 +325,4 @@
 
 
 
-
+ -->
