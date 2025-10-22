@@ -1,5 +1,37 @@
 <div class="loginContainer" (click)="cerrar($event)">
   <div class="login">
+    <div class="loginContainer" (click)="cerrar($event)">
+  <div class="login">
+    <button class="close-btn" (click)="cerrarLogin()">✖</button>
+    <h1>Iniciar sesión</h1>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          [(ngModel)]="email"
+          required
+          placeholder="usuario@correo.com"
+        >
+      </div>
+
+      <div class="form-group">
+        <input
+          id="password"
+          name="password"
+          type="password"
+          [(ngModel)]="password"
+          required
+          placeholder="********"
+        >
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+    </form>
+  </div>
+</div>
+
     <h1>Iniciar sesión</h1>
 
     <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
