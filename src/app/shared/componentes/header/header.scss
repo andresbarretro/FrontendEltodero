@@ -1,3 +1,10 @@
+// header{
+//   display: flex;
+//   flex-direction: column;
+//   align-items: stretch;
+//   width: 100%;
+// }
+
 .barra-superior {
   background-color: #052e5c;
   color: white;
@@ -80,37 +87,121 @@
   height:5px;
 }
 
-.Contenedor3{
-  background-color: white;
+// .Contenedor3{
+//   background-color: white;
+//   width: auto;
+//   height: 32px;
+
+// }
+
+// .MenuP{
+//   display: flex;
+//   list-style:none;
+//   gap: 6px;
+//   width: 100%;
+// }
+
+// .MenuP a{
+//   text-decoration: none;
+//   font-weight: bold;
+//   color: #083d77;
+//   font-size:16px;
+// }
+
+// .MenuP p{
+//   font-weight:bold;
+//   color: #a9a999;
+// }
+
+// .BotonI{
+//   text-align: center;
+//   background-color: #a9a999;
+//   height: 32px;
+//   width: 90px;
+// }
+
+.Contenedor3 {
+  background-color: #ffffff;
   width: 100%;
-  height: 32px;
-}
-
-.MenuP{
+  height: auto;
   display: flex;
-  list-style:none;
-  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+  border-top: 2px solid #a9a999;
+  border-bottom: 2px solid #a9a999;
 }
 
-.MenuP a{
+/* Menú principal */
+.MenuP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px; /* opcional: evita que se estire demasiado */
+}
+
+.MenuP a {
   text-decoration: none;
   font-weight: bold;
   color: #083d77;
-  font-size:16px;
+  font-size: 16px;
 }
 
-.MenuP p{
-  font-weight:bold;
+.MenuP p {
+  font-weight: bold;
   color: #a9a999;
+  margin: 0;
 }
 
-.BotonI{
+.BotonI {
   text-align: center;
   background-color: #a9a999;
   height: 32px;
   width: 90px;
+  line-height: 32px;
+  border-radius: 4px;
 }
 
+/* --- Ajuste responsive --- */
+@media (max-width: 768px) {
+  .Contenedor3 {
+    justify-content: flex-start;
+    padding: 0;
+    border: none;
+  }
+
+  .MenuP {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 2px solid #a9a999;
+    padding: 15px 0;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .MenuP.menu-abierto {
+    display: flex;
+  }
+
+  .MenuP p {
+    display: none;
+  }
+
+  .BotonI {
+    margin-top: 10px;
+  }
+}
 .Inicio{
   color: white;
 }
@@ -123,6 +214,9 @@
   font-size: 28px;
   cursor: pointer;
   color: #083d77;
+}
+.close-btn {
+  // display: none;
 }
 
 /* Estilos del menú */
@@ -137,7 +231,13 @@
 @media (max-width: 768px) {
   .menu-toggle {
     display: block; /* Mostrar el ícono hamburguesa */
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #083d77;
   }
+
 
   .MenuP {
     display: none; /* Ocultar el menú por defecto */
@@ -164,6 +264,17 @@
   .BotonI {
     margin-top: 10px;
   }
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    align-self: flex-end;
+    cursor: pointer;
+    color: #083d77;
+    margin-right: 20px;
+  }
+  .close-btn:hover {
+    color: #115fc4;
 }
 
 
@@ -190,5 +301,9 @@
     .barra-busqueda input {
       width: 100%;
     }
+
   }
+}
+
+
 }

@@ -13,7 +13,7 @@
 </div>
 
 <!----------------------------------------------------->
-<img src="/IMAGENES/Ofertas.png" alt="Ofertas"/>
+<img class="Anuncios" src="/IMAGENES/Ofertas.png" alt="Ofertas"/>
 <!----------------------------------------------------->
 
 <div class="carousel-wrapper">
@@ -122,207 +122,32 @@
   <button class="arrow right" aria-label="Siguiente" (click)="scrollRight()">›</button>
 </div>
 <!----------------------------------------------------->
-<img src="/IMAGENES/Productos.png" alt="Ofertas"/>
+<img class="Anuncios" src="/IMAGENES/Productos.png" alt="Ofertas"/>
 
-<div class="products-container">
+<div class="cards-container">
+
+<!----------------CONTAINER1------------------------------------->
 
 
   @if (loading) {
     <p>Cargando lista de productos...</p>
   } @else {
     @for (item of productos; track item.id) {
-      <div class="product-card">
-        <img src="assets/prueba_1.png" alt="img">
+      <div class="card">
+
+        <img [src]="item.imagen" alt="img">
+        <div class="card-content">
         <h3>{{ item.name }}</h3>
+          <p>{{item.description}}</p>
+        <div class="card-footer">
         <p>{{ item.price | currency:'USD' }}</p>
-        <p>{{item.description}}</p>
+
+        <button class="buy-btn">🛍️</button>
+        </div>
+      </div>
       </div>
     } @empty {
       <p>No hay productos para mostrar.</p>
+
     }
   }
-
-
-
-
-
-<!----------------CONTAINER1------------------------------------->
-
-<!-- <div class="cards-container">
-   <div class="card">
-    <img src="PRODUCTOS/moviles.jpg" alt="iPhone 17" />
-    <div class="card-content">
-      <h3>Samsung Galaxy A05</h3>
-      <p>
-       Rendimiento fluido y acabado premium.
-      </p>
-      <div class="card-footer">
-        <span class="price">$280.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="PRODUCTOS/computadores.jpg" alt="iPhone 17" />
-    <div class="card-content">
-      <h3>Pc Gamer</h3>
-      <p>
-        Potencia extrema y estilo futurista.
-      </p>
-      <div class="card-footer">
-        <span class="price">$2.600.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-    <div class="card">
-    <img src="PRODUCTOS/hogar.jpg" alt="iPhone 17" />
-    <div class="card-content">
-      <h3>Edredon</h3>
-      <p>
-        Descanso pleno y textura premium.
-      </p>
-      <div class="card-footer">
-        <span class="price">$70.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-    <div class="card">
-    <img src="PRODUCTOS/pantalla.jpg" alt="iPhone 17" />
-    <div class="card-content">
-      <h3>Pantalla De Proyector</h3>
-      <p>
-        Imagen nítida y montaje sencillo perfecto para el hogar.
-      </p>
-      <div class="card-footer">
-        <span class="price">$40.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
- <div class="card">
-    <img src="PRODUCTOS/accesorios.jpg" alt="iPhone 17" />
-    <div class="card-content">
-      <h3>Reloj</h3>
-      <p>
-        Elegancia clásica y tecnología exacta para cualquier ocacion.
-      </p>
-      <div class="card-footer">
-        <span class="price">$20.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="PRODUCTOS/juegos.jpg" alt="iPhone 17" />
-    <div class="card-content">
-      <h3>CONSOLA PORTATIL</h3>
-      <p>
-        Diversión total y potencia en tus manos.
-      </p>
-      <div class="card-footer">
-        <span class="price">$210.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="PRODUCTOS/fotografia.jpg" alt="iPhone 17" />
-    <div class="card-content">
-      <h3>Camara fotografica</h3>
-      <p>
-        Captura nítida y estilo profesional para recordar ese dia especial.
-      </p>
-      <div class="card-footer">
-        <span class="price">$50.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="PRODUCTOS/carros.jpg" alt="iPhone 17 Pro" />
-    <div class="card-content">
-      <h3>Compresor</h3>
-      <p>
-        Potencia constante y diseño resistente.
-      </p>
-      <div class="card-footer">
-        <span class="price">$70.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-
- <div class="cards-container">
-  <div class="card">
-    <img src="PRODUCTOS/deportes.jpg" alt="iPhone 17" />
-    <div class="card-content">
-      <h3>Fortalecedor</h3>
-      <p>
-        Reparación total y resultado firme..
-      </p>
-      <div class="card-footer">
-        <span class="price">$5.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-<div class="card">
-    <img src="IMAGENES/iphone17.jpg" alt="iPhone 17 Pro" />
-    <div class="card-content">
-      <h3>IPHONE 17 PRO</h3>
-      <p>
-        Potencia profesional con el mejor rendimiento y diseño.
-      </p>
-      <div class="card-footer">
-        <span class="price">$4.200.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="IMAGENES/iphone17.jpg" alt="iPhone 17 Pro" />
-    <div class="card-content">
-      <h3>IPHONE 17 PRO</h3>
-      <p>
-        Potencia profesional con el mejor rendimiento y diseño.
-      </p>
-      <div class="card-footer">
-        <span class="price">$4.200.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-<div class="card">
-    <img src="IMAGENES/iphone17.jpg" alt="iPhone 17 Pro" />
-    <div class="card-content">
-      <h3>IPHONE 17 PRO</h3>
-      <p>
-        Potencia profesional con el mejor rendimiento y diseño.
-      </p>
-      <div class="card-footer">
-        <span class="price">$4.200.000</span>
-        <button class="buy-btn">🛍️</button>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
- -->

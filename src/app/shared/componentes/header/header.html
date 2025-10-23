@@ -8,7 +8,7 @@
 
 <nav class="Contenedor1">
 
-  <img class="logot" src="./assets/images/logot.png" alt="LOGO4">
+  <a routerLink="/home"><img class="logot" src="./assets/images/logot.png" alt="LOGO4"></a>
 
 
   <div class="barra-busqueda">
@@ -29,9 +29,36 @@
     <button class="menu-toggle" (click)="toggleMenu()">
       ☰
     </button>
+
+    <ul class="MenuP" [class.menu-abierto]="menuAbierto">
+<button class="close-btn" (click)="cerrarMenu()">✖</button>
+<p>|</p>
+  <li><a routerLink="/moviles">Moviles</a></li>
+  <p>|</p>
+  <li><a routerLink="/computadores">Computadores</a></li>
+  <p>|</p>
+  <li><a routerLink="/hogar">Hogar</a></li>
+  <p>|</p>
+  <li><a routerLink="/pantallas">Pantallas</a></li>
+  <p>|</p>
+  <li><a routerLink="/accesorios">Accesorios</a></li>
+  <p>|</p>
+  <li><a routerLink="/juegos">Juegos</a></li>
+  <p>|</p>
+  <li><a routerLink="/audio">Audio</a></li>
+  <p>|</p>
+  <li><a routerLink="/fotografia">Fotografía</a></li>
+  <p>|</p>
+  <li><a routerLink="/decoracion">Decoración</a></li>
+  <p>|</p>
+  <li><a routerLink="/motocicletas">Motocicletas</a></li>
+  <p>|</p>
+  <li><a routerLink="/servicios">Servicios</a></li>
+  <p>|</p>
+</ul>
     <nav>
       <ul class="MenuP">
-        <li><a routerLink="/moviles">Moviles</a></li>
+        <!-- <li><a routerLink="/moviles">Moviles</a></li>
         <p>|</p>
         <li><a routerLink="/computadores">Computadores</a></li>
         <p>|</p>
@@ -55,10 +82,11 @@
         <p>|</p>
         <li><a routerLink="/motocicletas">Motocicletas</a></li>
         <p>|</p>
-        <li><a routerLink="/servicios">Servicios</a></li>
+        <li><a routerLink="/servicios">Servicios</a></li> -->
         <li class="BotonI"><a href="#" style="color: white;">Inicio</a></li>
       </ul>
     </nav>
 
 </div>
-
+</nav>
+</header>
