@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './fotografia.html',
   styleUrl: './fotografia.scss'
 })
-export class Fotografia {
+export class  Fotografia {
 
 }

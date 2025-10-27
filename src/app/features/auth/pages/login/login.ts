@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -7,7 +7,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-login',
   imports: [
-    CommonModule, FormsModule],
+    CommonModule, FormsModule,
+    RouterLink
+],
   standalone: true,
   templateUrl: './login.html',
   styleUrl: './login.scss'

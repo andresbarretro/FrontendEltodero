@@ -15,11 +15,12 @@ import { Decoracion } from './features/auth/pages/comoponentes/decoracion/decora
 import { Deportes } from './features/auth/pages/comoponentes/deportes/deportes';
 import { Motocicletas } from './features/auth/pages/comoponentes/motocicletas/motocicletas';
 import { Servicios } from './features/auth/pages/comoponentes/servicios/servicios';
-
+import { Registro } from './features/auth/pages/registro/registro/registro';
 export const routes: Routes =[
   { path: 'home', component: Home },
   { path: 'nosotros', component: Nosotros},
   {path: 'login', component:Login},
+  {path: 'registro',component:Registro},
   {path:'moviles',component:Moviles},
   {path:'hogar',component:Hogar},
   {path:'computadores',component:Computadores},
@@ -35,5 +36,6 @@ export const routes: Routes =[
   {path:'servicios',component:Servicios},
   {path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
+
 
 ];

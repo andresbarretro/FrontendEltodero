@@ -52,16 +52,17 @@ text-align: center;
     }
   }
 
-// .login button {
-//   width: 100%;
-//   padding: 10px;
-//   border: none;
-//   border-radius: 5px;
-//   background: #4CAF50;
-//   color: white;
-//   font-size: 16px;
-//   cursor: pointer;
-// }
+.registro1 {
+  display: block;
+  margin-top: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .close-btn {
   position: absolute;
